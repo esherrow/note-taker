@@ -1,13 +1,15 @@
 const router = require('express').Router();
-const {filterByQuery, createNewNote} = require('../../lib/notes');
+const {findById, createNewNote} = require('../../lib/notes');
 const {notes} = require('../../db/db.json')
 
-router.get('/notes', (req, res)=>{
-    let results = notes;
-    if(req.query){
-        results = filterByQuery(req.query, results);
+router.get('/notes/:id', (req, res)=>{
+    let results = findById(req.params, notes);
+    if(results){
+        res.json(results);
+    }else{
+        res.send(404);
     }
-    res.json(results);
+
 })
 
 router.post('/notes', (req, res)=>{
