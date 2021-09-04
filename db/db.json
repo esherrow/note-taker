@@ -1,6 +1,12 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  {
+    "title": "Note 1",
+    "text": "note content\n",
+    "id": "7698049e-3291-4c99-8e90-9e3b81bfde64"
+  },
+  {
+    "title": "Note 2",
+    "text": "Test 25 of Notetaker",
+    "id": "7792d821-04f3-4a01-8eb2-6768d2362a1b"
+  }
 ]
